@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Courier, monospace;
+    background-color: #ECF9FF;
+    color: #4E31AA;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 10vh;
+    padding-top: 3%;
+    padding-left: 0%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4E31AA;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.hlavicka {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.hlavniNadpis {
+    flex-basis: 50%;
+    position: relative;
+    margin-left: 3%;
+}
+
+.site-logo {
+    border-radius: 0px 250px 250px 0px;
+    border: 2px solid gray;
+    border-left: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.social-links img {
+    height: 15px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.main {
+    max-width: 100%;
+    height: auto;
+    font-size: 15px;
+    text-align: center;
+    padding: 0% 20%;
+}
+
+.main p {
+    margin-bottom: 30px;
+}
+
+.main ul li {
+    text-align: left;
+}
+
+.hlavniFotka img {
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+.hlavniFotka{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    text-align: center;
+
+}
+
+.social-links a {
+    color: black;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
