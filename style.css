@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Courier, monospace;
-    background-color: #ECF9FF;
-    color: #4E31AA;
+    background-color: #0B2447;
+    color: #AA77FF;
 }
 
 body {
@@ -31,12 +31,12 @@ nav {
 nav ul li {
     list-style: none;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10%;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #4E31AA;
+    color: #AA77FF;
     font-size: 14px;
 }
 
@@ -48,7 +48,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 0px;
+    margin: 10px 0px;
 }
 
 .hlavniNadpis {
@@ -90,6 +90,7 @@ nav ul li a:hover {
 .hlavniFotka img {
     border-radius: 50%;
     border: 2px solid gray;
+    max-width: 100%;
 }
 .hlavniFotka{
     text-align: center;
@@ -98,11 +99,10 @@ nav ul li a:hover {
 
 .social-links {
     text-align: center;
-
 }
 
 .social-links a {
-    color: black;
+    color: wheat;
     display: inline-block;
     margin-right: 10px;
 }
