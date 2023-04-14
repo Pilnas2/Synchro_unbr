@@ -1,34 +1,14 @@
-// Získání elementu tlačítka pro přidání novinky
-const addButton = document.querySelector('#add-button');
+// Wrap every letter in a span
+var textWrapper = document.querySelector('h1');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-// Získání elementu pro vstup novinky
-const newsInput = document.querySelector('#news-input');
-
-// Získání elementu seznamu novinek
-const newsList = document.querySelector('#news-list');
-
-// Funkce pro přidání novinky
-function addNews() {
-  // Získání textu z vstupu novinky
-  const newsText = newsInput.value;
-
-  // Pokud je text novinky prázdný, nic se neprovede
-  if (!newsText) {
-    return;
-  }
-
-  // Vytvoření nového elementu pro novinku
-  const newsItem = document.createElement('li');
-
-  // Nastavení textu novinky
-  newsItem.textContent = newsText;
-
-  // Přidání nové novinky na konec seznamu novinek
-  newsList.appendChild(newsItem);
-
-  // Vymazání textu vstupu novinky
-  newsInput.value = '';
-}
-
-// Přidání posluchače na tlačítko pro přidání novinky
-addButton.addEventListener('click', addNews);
+anime.timeline()
+  .add({
+    targets: 'h1 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  });

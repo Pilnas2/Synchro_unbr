@@ -127,3 +127,37 @@ footer {
     width: 100%;
     height: 60px;
 }
+
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.trenersPhotos {
+    overflow: hidden;
+      }
+
+.trenersPhotos img {
+    border-radius: 80%;
+    margin-right: 20px;
+    display: block;
+    float: left;
+    clear: left;
+    margin-bottom: 40px;
+}
+.trenersPhotos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .trenersPhotos li {
+    margin-bottom: 20px;
+    clear: left;
+  }
+  .trenersPhotos p {
+    margin: 0;
+  }
