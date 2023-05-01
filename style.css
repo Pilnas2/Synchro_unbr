@@ -137,9 +137,10 @@ footer {
     display: inline-block;
     line-height: 1em;
 }
+
 .trenersPhotos {
     overflow: hidden;
-      }
+}
 
 .trenersPhotos img {
     border-radius: 80%;
@@ -149,15 +150,60 @@ footer {
     clear: left;
     margin-bottom: 40px;
 }
+
 .trenersPhotos ul {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  .trenersPhotos li {
+}
+
+.trenersPhotos li {
     margin-bottom: 20px;
     clear: left;
-  }
-  .trenersPhotos p {
+}
+
+.trenersPhotos p {
     margin: 0;
-  }
+}
+
+
+.traning-table {
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 16px;
+    font-family: cursive;
+
+    min-width: 400px;
+    line-height: 1.5;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.15);
+    margin: 40px auto 20px;
+    margin-bottom: 100px;
+}
+
+.traning-table tr:first-child td{
+    background-color:#bcdff6 ;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+  
+}
+
+.traning-table td,
+th {
+    border: 1px solid;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    }
+    .traning-table  tr:first-child td:first-child {
+        border-top-left-radius: 30px;
+    }
+
+    .traning-table  tr:first-child td:last-child {
+        border-top-right-radius: 30px;
+    }
+    .horizontal-line {
+        border-top: 1px solid black;
+        width: 100%;
+        margin: 20px 0;
+      }
