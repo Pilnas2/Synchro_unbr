@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,94 +8,107 @@
     <title>Kontakty</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="hlavicka">
-          <div class="hlavniNadpis">
-            <h1>Plavecký klub Univerzita Brno</h1>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="index.html">Domů</a></li>
-              <li><a href="ourClub.html">Náš klub</a></li>
-              <li><a href="trenincs.html">Tréninky</a></li>
-              <li><a href="contacs.html">Kontakt</a></li>
-            </ul>
-          </nav>
+            <div class="hlavniNadpis">
+                <h1>Plavecký klub Univerzita Brno</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="ourClub.html">Náš klub</a></li>
+                    <li><a href="trenincs.html">Tréninky</a></li>
+                    <li><a href="contacs.html">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
-      </header>
-      <div class="container">
+    </header>
+    <div class="container">
         <img src="images/logo.png" alt="logo UNB" height="200" width="300" class="site-logo">
-      </div>
+    </div>
 
-      <div class="main">
+    <div class="main">
         <main>
-          <h2>Jak nás můžete kontaktovat?</h2>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$("#submit").click(function() {
-				var name = $("#name").val();
-				var age = $("#age").val();
-				var gender = $("#gender").val();
-				var parentName = $("#parent-name").val();
-				var parentEmail = $("#parent-email").val();
-				var parentPhone = $("#parent-phone").val();
-				var data = {
-					"name": name,
-					"age": age,
-					"gender": gender,
-					"parentName": parentName,
-					"parentEmail": parentEmail,
-					"parentPhone": parentPhone
-				};
-				$.ajax({
-					type: "POST",
-					url: "submit.php",
-					data: JSON.stringify(data),
-					success: function() {
-						alert("Přihláška byla úspěšně odeslána!");
-						$("#name").val("");
-						$("#age").val("");
-						$("#gender").val("");
-						$("#parent-name").val("");
-						$("#parent-email").val("");
-						$("#parent-phone").val("");
-					},
-					error: function() {
-						alert("Došlo k chybě při odesílání přihlášky. Zkuste to prosím znovu později.");
-					}
-				});
-			});
-		});
-	</script>
-</head>
-<body>
-	<h1>Přihláška do plaveckého klubu</h1>
-	<form>
-		<label for="name">Jméno:</label>
-		<input type="text" id="name" name="name"><br><br>
+            <h1>Jak nás můžete kontaktovat?</h1>
+            <div>
+                <p>Přijďte se k nám přidat a zlepšit své plavecké dovednosti! Nabízíme širokou škálu tréninkových
+                    programů pro všechny věkové kategorie a úrovně. Staňte se součástí naší plavecké rodiny a začněte
+                    dosahovat svých cílů.</p>
+                <img src="images/nabor.jpg" alt="naborova foka s informacemi o naboru" height="500" width="600">
+            </div>
 
-		<label for="age">Věk:</label>
-		<input type="number" id="age" name="age"><br><br>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $("#submit").click(function () {
+                        var name = $("#name").val();
+                        var age = $("#age").val();
+                        var gender = $("#gender").val();
+                        var parentName = $("#parent-name").val();
+                        var parentEmail = $("#parent-email").val();
+                        var parentPhone = $("#parent-phone").val();
+                        var data = {
+                            "name": name,
+                            "age": age,
+                            "gender": gender,
+                            "parentName": parentName,
+                            "parentEmail": parentEmail,
+                            "parentPhone": parentPhone
+                        };
+                        $.ajax({
+                            type: "POST",
+                            url: "submit.php",
+                            data: JSON.stringify(data),
+                            success: function () {
+                                alert("Přihláška byla úspěšně odeslána!");
+                                $("#name").val("");
+                                $("#age").val("");
+                                $("#gender").val("");
+                                $("#parent-name").val("");
+                                $("#parent-email").val("");
+                                $("#parent-phone").val("");
+                            },
+                            error: function () {
+                                alert("Došlo k chybě při odesílání přihlášky. Zkuste to prosím znovu později.");
+                            }
+                        });
+                    });
+                });
+            </script>
+            </head>
 
-		<label for="gender">Pohlaví:</label>
-		<select id="gender" name="gender">
-			<option value="male">Muž</option>
-			<option value="female">Žena</option>
-			<option value="other">Jiné</option>
-		</select><br><br>
+            <body>
+                <br>
+                <h2><i>Přihláška do plaveckého klubu</i></h2>
+                <hr style="width: 35%; margin: auto;">
+                <br>
+                <form>
+                    <label for="name">Jméno:</label>
+                    <input type="text" id="name" name="name"><br><br>
 
-		<label for="parent-name">Jméno rodiče:</label>
-		<input type="text" id="parent-name" name="parent-name"><br><br>
+                    <label for="age">Věk:</label>
+                    <input type="number" id="age" name="age"><br><br>
 
-		<label for="parent-email">Email rodiče:</label>
-		<input type="email" id="parent-email" name="parent-email"><br><br>
+                    <label for="gender">Pohlaví:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Muž</option>
+                        <option value="female">Žena</option>
+                        <option value="other">Jiné</option>
+                    </select><br><br>
 
-		<label for="parent-phone">Telefonní číslo rodiče:</label>
-		<input type="text" id="parent-phone" name="parent-phone"><br><br>
+                    <label for="parent-name">Jméno rodiče:</label>
+                    <input type="text" id="parent-name" name="parent-name"><br><br>
 
-		<input type="button" id="submit" value="Odeslat">
-	</form>
-</body>
+                    <label for="parent-email">Email rodiče:</label>
+                    <input type="email" id="parent-email" name="parent-email"><br><br>
+
+                    <label for="parent-phone">Telefonní číslo rodiče:</label>
+                    <input type="text" id="parent-phone" name="parent-phone"><br><br>
+
+                    <input type="button" id="submit" value="Odeslat">
+                </form>
+            </body>
+
 </html>
