@@ -36,9 +36,10 @@
                 <p>Přijďte se k nám přidat a zlepšit své plavecké dovednosti! Nabízíme širokou škálu tréninkových
                     programů pro všechny věkové kategorie a úrovně. Staňte se součástí naší plavecké rodiny a začněte
                     dosahovat svých cílů.</p>
-                <img src="images/nabor.jpg" alt="naborova foka s informacemi o naboru" height="500" width="600">
             </div>
-
+<div class="nabor-fotka">
+    <img src="images/nabor.jpg" alt="naborova foka s informacemi o naboru" height="500" width="600">
+</div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script>
                 $(document).ready(function () {
@@ -59,7 +60,7 @@
                         };
                         $.ajax({
                             type: "POST",
-                            url: "submit.php",
+                            url: "submit.json",
                             data: JSON.stringify(data),
                             success: function () {
                                 alert("Přihláška byla úspěšně odeslána!");
@@ -111,5 +112,10 @@
                 </form>
             </body><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
             <script src="script.js"></script>
-
+            <footer>
+                <div class="copyright">
+                  <p>&copy; 2023 Plavecký klub Univerzita Brno</p>
+                </div>
+              </footer>
+        </main>
 </html>

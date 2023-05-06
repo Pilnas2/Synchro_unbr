@@ -1,7 +1,0 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = $_POST;
-    $filename = 'prihlaska-' . date('Ymd-His') . '.txt';
-    file_put_contents($filename, print_r($data, true));
-}
-?>
